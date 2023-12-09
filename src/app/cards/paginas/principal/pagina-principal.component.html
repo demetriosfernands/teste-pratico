@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="todo-form">
+    <app-search (setsData)="loadCards($event)"></app-search>
+  </div>
+  <div class="list_container">
+      <set-item
+        *ngFor="let card of cards"
+        [routerLink]="['card', card.code]"
+        [name]="card.name"
+        [block]="card.block"
+        [releaseDate]="card.releaseDate"
+      ></set-item>
+      <div *ngIf="cards.length == 0 && submited">Not found</div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="card">
+  <img *ngIf="imageUrl" [src]="imageUrl" alt="{{ name }}" class="card-image">
+  <div class="card-details">
+    <div class="card-header">{{ name }}</div>
+    <div class="card-content">
+      <p><strong>Mana Cost:</strong> {{ manaCost }}</p>
+      <p class="color-identity"><strong style="margin-right: 5px">Color Identity:</strong>
+        <img *ngIf="colorIdentity == 'U'" width="20" height="20" [src]="'/assets/U.png'" alt="{{ name }}">
+        <img *ngIf="colorIdentity == 'R'" width="20" height="20" [src]="'/assets/R.png'" alt="{{ name }}">
+        <img *ngIf="colorIdentity == 'G'" width="20" height="20" [src]="'/assets/G.png'" alt="{{ name }}">
+        <img *ngIf="colorIdentity == 'B'" width="20" height="20" [src]="'/assets/B.png'" alt="{{ name }}">
+      </p>
+      <p class="text">{{ text }}</p>
+    </div>
+  </div>
+</div>

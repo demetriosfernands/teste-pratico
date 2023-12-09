@@ -1,0 +1,47 @@
+.custom-search-container {
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 10px;
+}
+
+.search-field,
+.select-field {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.select-field {
+  cursor: pointer;
+  width: 130px;
+}
+
+.search-button {
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  width: 100px;
+  padding: 5.5px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #1565c0;
+}
+
+.error-message {
+  color: red;
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+.algnSelect {
+  display: flex;
+  flex-direction: column;
+}

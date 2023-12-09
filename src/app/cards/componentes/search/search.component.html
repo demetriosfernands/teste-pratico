@@ -1,0 +1,20 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="custom-search-container">
+  <input type="text" formControlName="name" class="search-field" placeholder="Buscar" />
+
+  <div class="algnSelect">
+    <select formControlName="block" class="select-field">
+      <option [ngValue]="null">Selecione...</option>
+      <option value="Amonkhet">Amonkhet</option>
+      <option value="Ixalan">Ixalan</option>
+      <option value="Zendikar">Zendikar</option>
+      <option value="Ravnica">Ravnica</option>
+      <option value="Onslaught">Onslaught</option>
+    </select>
+    <div *ngIf="getSelect()?.invalid && getSelect()?.dirty" class="error-message">Selecione uma opção</div>
+  </div>
+
+  <button type="submit" class="search-button">
+    Buscar
+    <span class="material-icons">search</span>
+  </button>
+</form>

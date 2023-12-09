@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="list_container">
+    <button class="back-button" (click)="goBack()">
+      <span class="material-icons">arrow_back</span> Voltar
+    </button>
+
+    <div class="loading" *ngIf="isLoading">
+      <span>Abrindo os seus boosters...</span>
+      <i class="material-icons" *ngIf="isLoading">cached</i>
+    </div>
+    <div class="loading" *ngIf="showError && !isLoading">
+      <span>{{errorMessage}}</span>
+    </div>
+    <card-item *ngFor="let card of cards"
+               [colorIdentity]="card.colorIdentity"
+               [manaCost]="card.manaCost"
+               [name]="card.name"
+               [text]="card.text"
+               [imageUrl]="card.imageUrl">
+    </card-item>
+  </div>
+</div>
